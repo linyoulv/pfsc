@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yq.dao.ListDao">
+    <insert id="insert" parameterType="java.util.Map">
+	insert order(product_id,product_name,product_spe,product_price,
+	product_num,product_start_num,address) values(#{product_id},#{product_name},
+	#{product_spe},#{product_price},#{product_num},#{product_start_num},#{address}) 
+    </insert>
+    
+     <select id="select" resultType="com.yq.entity.List">
+    select * from order where product_id=#{product_id}
+    </select>
+    
+    
+    
+</mapper>

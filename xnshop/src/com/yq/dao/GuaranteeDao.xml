@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yq.dao.GuaranteeDao">
+  <insert id="insert" parameterType="java.util.Map">
+	insert Guarantee(guarant_price) 
+	values
+	(#{guarant_price}) 
+    </insert>  
+ 
+    
+  <select id="list" resultType="com.yq.entity.Guarantee">
+    select * from Guarantee limit 1
+  </select>
+
+      <select id="listById" resultType="com.yq.entity.Guarantee">
+    select * from Guarantee where id=#{id} 
+    </select>    
+    
+      <update id="update" parameterType="java.util.Map">
+    update Guarantee set guarant_price=#{guarant_price} where id=#{id}
+    </update>
+    
+    
+</mapper>

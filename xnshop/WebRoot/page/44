@@ -1,0 +1,704 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="city_page">
+        
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="format-detection" content="address=no;">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="apple-touch-icon-precomposed" href="http://img.58cdn.com.cn/m58/img/icon58b.png" />
+    <link rel="apple-touch-startup-image" href="http://img.58cdn.com.cn/m58/img/icon58b.png" />
+
+    <title>58同城</title>
+    <!-- css -->
+    <link rel="stylesheet" href="http://c.58cdn.com.cn/m58/m3/css/m4/m.all_v20160506190752.css" />
+    <link rel="stylesheet" href="http://c.58cdn.com.cn/m58/m3/css/m5.city_v20160506214733.css" />
+    <!-- css end-->
+    
+</head>
+
+<body>
+
+<div class="body_div">
+
+<!-- BODY HEADER -->
+
+ 
+<!-- BODY HERDER END -->
+<!-- BODY SEARCHER -->
+<!--有图：search 无图：search hpic -->
+<!--<div class="search">
+    <form action="#" method="get" onsubmit="return win.submit();">
+        <div class="search_input">
+            <a id='searchUrl' class='search_url_new'>请输入关键词</a>
+            <span  class="ico_clear body_bg"  onclick="win.clear(this)"></span>
+        </div>
+        <div class="search_but body_bg" onClick="win.submit(0)"></div>
+    </form>
+    <div class="search_ajax">
+    </div>
+</div>-->
+
+<div class="search search_container_city search_container">
+    <form action="#" method="get" onSubmit="return win.submit();">
+        <div class="search_input">
+            <input type="text" name="key" class="input_keys" id="keyWords1" value="" onBlur="win.blur()"   onfocus="win.focus()" onkeyup="win.getData()" autocomplete="off" placeholder="输入城市名或首字母">
+        </div>
+        <div class="search_but body_bg" onclick="win.submit(0)"></div>
+    </form>
+    <div class="search_ajax"> </div>
+</div>
+
+<!-- BODY SEARCHER END -->
+
+<!-- 城市搜索-->
+
+<div class="city_box">
+
+<div class="curr_city" style="display: none;">正在定位中,请稍后...</div>
+<div class="local-city"></div>
+
+<h3>热门城市</h3>
+<ul class="city_lst hot">
+    <li><a>北京</a></li>
+    <li><a>广州</a></li>
+    <li><a>深圳</a></li>
+    <li><a>上海</a></li>
+    <li><a>成都</a></li>
+    <li><a>武汉</a></li>
+    <li><a class="nobor">哈尔滨</a></li>
+    <li><a>长沙</a></li>
+    <li><a>重庆</a></li>
+    <li><a class="nobor nobor2">西安</a></li>
+    <li><a class="nobor2">郑州</a></li>
+    <li><a class="nobor2">天津</a></li>
+    <li><a>海外城市</a></li>
+</ul>
+
+<h3>按字母排序</h3>
+
+<ul class="letters_lst">
+
+    <li><a href="javascript:;">A</a></li>
+
+    <li><a href="javascript:;">B</a></li>
+
+    <li><a href="javascript:;">C</a></li>
+
+    <li><a href="javascript:;">D</a></li>
+
+    <li><a href="javascript:;">E</a></li>
+
+    <li><a href="javascript:;">F</a></li>
+
+    <li><a href="javascript:;">G</a></li>
+
+    <li><a href="javascript:;">H</a></li>
+
+    <li><a href="javascript:;">J</a></li>
+
+    <li><a href="javascript:;">K</a></li>
+
+    <li><a href="javascript:;">L</a></li>
+
+    <li><a href="javascript:;">M</a></li>
+
+    <li><a href="javascript:;">N</a></li>
+
+    <li><a href="javascript:;">P</a></li>
+
+    <li><a href="javascript:;">Q</a></li>
+
+    <li><a href="javascript:;">R</a></li>
+
+    <li><a href="javascript:;">S</a></li>
+
+    <li><a href="javascript:;">T</a></li>
+
+    <li><a href="javascript:;">W</a></li>
+
+    <li><a href="javascript:;">X</a></li>
+
+    <li><a href="javascript:;">Y</a></li>
+
+    <li><a href="javascript:;">Z</a></li>
+
+</ul>
+
+<h4><p><span>A</span>(以A为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a  class="nobor">鞍山</a></li>
+    <li><a>安阳</a></li>
+    <li><a>安庆</a></li>
+    <li><a>安康</a></li>
+    <li><a>澳门</a></li>
+    <li><a>阿克苏</a></li>
+    <li><a>阿拉尔</a></li>
+    <li><a>阿里</a></li>
+    <li><a>阿坝</a></li>
+    <li><a>阿拉善盟</a></li>
+    <li><a>安顺</a></li>
+    <li><a>阿勒泰</a></li>
+
+</ul>
+
+<h4><p><span>B</span>(以B为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="" onclick="load_index(this,'bj');"  class="nobor">北京</a></li>
+    <li><a href="http://m.58.com/bd/http://p.m.58.com/" onclick="load_index(this,'bd');" >保定</a></li>
+    <li><a href="http://m.58.com/bt/http://p.m.58.com/" onclick="load_index(this,'bt');" >包头</a></li>
+    <li><a href="http://m.58.com/bz/http://p.m.58.com/" onclick="load_index(this,'bz');"  class="nobor">滨州</a></li>
+    <li><a href="http://m.58.com/baoji/http://p.m.58.com/" onclick="load_index(this,'baoji');" >宝鸡</a></li>
+    <li><a href="http://m.58.com/bengbu/http://p.m.58.com/" onclick="load_index(this,'bengbu');" >蚌埠</a></li>
+    <li><a href="http://m.58.com/benxi/http://p.m.58.com/" onclick="load_index(this,'benxi');"  class="nobor">本溪</a></li>
+    <li><a href="http://m.58.com/bc/http://p.m.58.com/" onclick="load_index(this,'bc');" >白城</a></li>
+    <li><a href="http://m.58.com/bozhou/http://p.m.58.com/" onclick="load_index(this,'bozhou');" >亳州</a></li>
+    <li><a href="http://m.58.com/bs/http://p.m.58.com/" onclick="load_index(this,'bs');"  class="nobor">保山</a></li>
+    <li><a href="http://m.58.com/bygl/http://p.m.58.com/" onclick="load_index(this,'bygl');" >巴音郭楞</a></li>
+    <li><a href="http://m.58.com/betl/http://p.m.58.com/" onclick="load_index(this,'betl');" >博尔塔拉</a></li>
+    <li><a href="http://m.58.com/bazhong/http://p.m.58.com/" onclick="load_index(this,'bazhong');"  class="nobor">巴中</a></li>
+    <li><a href="http://m.58.com/bycem/http://p.m.58.com/" onclick="load_index(this,'bycem');" >巴彦淖尔市</a></li>
+    <li><a href="http://m.58.com/baishan/http://p.m.58.com/" onclick="load_index(this,'baishan');" >白山</a></li>
+    <li><a href="http://m.58.com/by/http://p.m.58.com/" onclick="load_index(this,'by');"  class="nobor">白银</a></li>
+    <li><a href="http://m.58.com/baise/http://p.m.58.com/" onclick="load_index(this,'baise');" >百色</a></li>
+    <li><a href="http://m.58.com/bh/http://p.m.58.com/" onclick="load_index(this,'bh');" >北海</a></li>
+    <li><a href="http://m.58.com/bijie/http://p.m.58.com/" onclick="load_index(this,'bijie');"  class="nobor nobor2 bor_r">毕节</a></li>
+    <li><a href="http://m.58.com/baish/http://p.m.58.com/" onclick="load_index(this,'baish');"  class="nobor nobor2 bor_r">白沙</a></li>
+    <li><a href="http://m.58.com/baoting/http://p.m.58.com/" onclick="load_index(this,'baoting');"  class="nobor nobor2 bor_r">保亭</a></li>
+    <li><a href="http://m.58.com/boluo/http://p.m.58.com/" onclick="load_index(this,'boluo');"  class="nobor nobor2 bor_r">博罗</a></li>
+</ul>
+
+<h4><p><span>C</span>(以C为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/cd/http://p.m.58.com/" onclick="load_index(this,'cd');"  class="nobor">成都</a></li>
+    <li><a href="http://m.58.com/cs/http://p.m.58.com/" onclick="load_index(this,'cs');" >长沙</a></li>
+    <li><a href="http://m.58.com/cq/http://p.m.58.com/" onclick="load_index(this,'cq');" >重庆</a></li>
+    <li><a href="http://m.58.com/cc/http://p.m.58.com/" onclick="load_index(this,'cc');"  class="nobor">长春</a></li>
+    <li><a href="http://m.58.com/cz/http://p.m.58.com/" onclick="load_index(this,'cz');" >常州</a></li>
+    <li><a href="http://m.58.com/cangzhou/http://p.m.58.com/" onclick="load_index(this,'cangzhou');" >沧州</a></li>
+    <li><a href="http://m.58.com/changde/http://p.m.58.com/" onclick="load_index(this,'changde');"  class="nobor">常德</a></li>
+    <li><a href="http://m.58.com/chenzhou/http://p.m.58.com/" onclick="load_index(this,'chenzhou');" >郴州</a></li>
+    <li><a href="http://m.58.com/chifeng/http://p.m.58.com/" onclick="load_index(this,'chifeng');" >赤峰</a></li>
+    <li><a href="http://m.58.com/chengde/http://p.m.58.com/" onclick="load_index(this,'chengde');"  class="nobor">承德</a></li>
+    <li><a href="http://m.58.com/changzhi/http://p.m.58.com/" onclick="load_index(this,'changzhi');" >长治</a></li>
+    <li><a href="http://m.58.com/cx/http://p.m.58.com/" onclick="load_index(this,'cx');" >楚雄</a></li>
+    <li><a href="http://m.58.com/changji/http://p.m.58.com/" onclick="load_index(this,'changji');"  class="nobor">昌吉</a></li>
+    <li><a href="http://m.58.com/changge/http://p.m.58.com/" onclick="load_index(this,'changge');" >长葛</a></li>
+    <li><a href="http://m.58.com/changdu/http://p.m.58.com/" onclick="load_index(this,'changdu');" >昌都</a></li>
+    <li><a href="http://m.58.com/cy/http://p.m.58.com/" onclick="load_index(this,'cy');"  class="nobor">朝阳</a></li>
+    <li><a href="http://m.58.com/ch/http://p.m.58.com/" onclick="load_index(this,'ch');" >巢湖</a></li>
+    <li><a href="http://m.58.com/chizhou/http://p.m.58.com/" onclick="load_index(this,'chizhou');" >池州</a></li>
+    <li><a href="http://m.58.com/chuzhou/http://p.m.58.com/" onclick="load_index(this,'chuzhou');"  class="nobor nobor2">滁州</a></li>
+    <li><a href="http://m.58.com/chaozhou/http://p.m.58.com/" onclick="load_index(this,'chaozhou');"  class="nobor2">潮州</a></li>
+    <li><a href="http://m.58.com/chongzuo/http://p.m.58.com/" onclick="load_index(this,'chongzuo');"  class="nobor2">崇左</a></li>
+    
+    <li><a href="http://m.58.com/cm/http://p.m.58.com/" onclick="load_index(this,'cm');"  class="nobor2">澄迈</a></li>
+    <li><a href="http://m.58.com/cixi/http://p.m.58.com/" onclick="load_index(this,'cixi');"  class="nobor2">慈溪</a></li>
+    <li><a href="http://m.58.com/changxing/http://p.m.58.com/" onclick="load_index(this,'changxing');"  class="nobor2">长兴</a></li>
+</ul>
+
+<h4><p><span>D</span>(以D为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/dg/http://p.m.58.com/" onclick="load_index(this,'dg');"  class="nobor">东莞</a></li>
+    <li><a href="http://m.58.com/dl/http://p.m.58.com/" onclick="load_index(this,'dl');" >大连</a></li>
+    <li><a href="http://m.58.com/dz/http://p.m.58.com/" onclick="load_index(this,'dz');" >德州</a></li>
+    <li><a href="http://m.58.com/dy/http://p.m.58.com/" onclick="load_index(this,'dy');"  class="nobor">东营</a></li>
+    <li><a href="http://m.58.com/dq/http://p.m.58.com/" onclick="load_index(this,'dq');" >大庆</a></li>
+    <li><a href="http://m.58.com/dandong/http://p.m.58.com/" onclick="load_index(this,'dandong');" >丹东</a></li>
+    <li><a href="http://m.58.com/dt/http://p.m.58.com/" onclick="load_index(this,'dt');"  class="nobor">大同</a></li>
+    <li><a href="http://m.58.com/dali/http://p.m.58.com/" onclick="load_index(this,'dali');" >大理</a></li>
+    <li><a href="http://m.58.com/dingzhou/http://p.m.58.com/" onclick="load_index(this,'dingzhou');" >定州</a></li>
+    <li><a href="http://m.58.com/deyang/http://p.m.58.com/" onclick="load_index(this,'deyang');"  class="nobor">德阳</a></li>
+    <li><a href="http://m.58.com/diqing/http://p.m.58.com/" onclick="load_index(this,'diqing');" >迪庆</a></li>
+    <li><a href="http://m.58.com/dh/http://p.m.58.com/" onclick="load_index(this,'dh');" >德宏</a></li>
+    <li><a href="http://m.58.com/dazhou/http://p.m.58.com/" onclick="load_index(this,'dazhou');"  class="nobor">达州</a></li>
+    <li><a href="http://m.58.com/dx/http://p.m.58.com/" onclick="load_index(this,'dx');" >定西</a></li>
+    <li><a href="http://m.58.com/dxal/http://p.m.58.com/" onclick="load_index(this,'dxal');" >大兴安岭</a></li>
+    <li><a href="http://m.58.com/dafeng/http://p.m.58.com/" onclick="load_index(this,'dafeng');"  class="nobor nobor2 bor_r">大丰</a></li>
+    <li><a href="http://m.58.com/da/http://p.m.58.com/" onclick="load_index(this,'da');" >定安</a></li>
+    <li><a href="http://m.58.com/donghai/http://p.m.58.com/" onclick="load_index(this,'donghai');" >东海</a></li>
+    <li><a href="http://m.58.com/dongtai/http://p.m.58.com/" onclick="load_index(this,'dongtai');">东台</a></li>
+    <li><a href="http://m.58.com/deqing/http://p.m.58.com/" onclick="load_index(this,'deqing');" >德庆</a></li>
+    <li><a href="http://m.58.com/danyang/http://p.m.58.com/" onclick="load_index(this,'danyang');" >丹阳</a></li>
+    <li><a href="http://m.58.com/danzhou/http://p.m.58.com/" onclick="load_index(this,'danzhou');" >儋州</a></li>
+    <li><a href="http://m.58.com/dongyang/http://p.m.58.com/" onclick="load_index(this,'dongyang');" >东阳</a></li>
+</ul>
+
+<h4><p><span>E</span>(以E为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/erds/http://p.m.58.com/" onclick="load_index(this,'erds');"  class="nobor nobor2">鄂尔多斯</a></li>
+    <li><a href="http://m.58.com/es/http://p.m.58.com/" onclick="load_index(this,'es');"  class="nobor2">恩施</a></li>
+    <li><a href="http://m.58.com/ez/http://p.m.58.com/" onclick="load_index(this,'ez');"  class="nobor2">鄂州</a></li>
+</ul>
+
+<h4><p><span>F</span>(以F为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/fz/http://p.m.58.com/" onclick="load_index(this,'fz');"  class="nobor">福州</a></li>
+    <li><a href="http://m.58.com/fs/http://p.m.58.com/" onclick="load_index(this,'fs');" >佛山</a></li>
+    <li><a href="http://m.58.com/fushun/http://p.m.58.com/" onclick="load_index(this,'fushun');" >抚顺</a></li>
+    <li><a href="http://m.58.com/fy/http://p.m.58.com/" onclick="load_index(this,'fy');"  class="nobor">阜阳</a></li>
+    <li><a href="http://m.58.com/fx/http://p.m.58.com/" onclick="load_index(this,'fx');" >阜新</a></li>
+    <li><a href="http://m.58.com/fuzhou/http://p.m.58.com/" onclick="load_index(this,'fuzhou');" >抚州</a></li>
+    <li><a href="http://m.58.com/fcg/http://p.m.58.com/" onclick="load_index(this,'fcg');"  class="nobor nobor2 bor_r">防城港</a></li>
+</ul>
+
+<h4><p><span>G</span>(以G为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/gz/http://p.m.58.com/" onclick="load_index(this,'gz');"  class="nobor">广州</a></li>
+    <li><a href="http://m.58.com/gy/http://p.m.58.com/" onclick="load_index(this,'gy');" >贵阳</a></li>
+    <li><a href="http://m.58.com/gl/http://p.m.58.com/" onclick="load_index(this,'gl');" >桂林</a></li>
+    <li><a href="http://m.58.com/gg/http://p.m.58.com/" onclick="load_index(this,'gg');"  class="nobor">贵港</a></li>
+    <li><a href="http://m.58.com/guyuan/http://p.m.58.com/" onclick="load_index(this,'guyuan');" >固原</a></li>
+    <li><a href="http://m.58.com/ganzhou/http://p.m.58.com/" onclick="load_index(this,'ganzhou');" >赣州</a></li>
+    <li><a href="http://m.58.com/gt/http://p.m.58.com/" onclick="load_index(this,'gt');"  class="nobor">馆陶</a></li>
+    <li><a href="http://m.58.com/ga/http://p.m.58.com/" onclick="load_index(this,'ga');" >广安</a></li>
+    <li><a href="http://m.58.com/guangyuan/http://p.m.58.com/" onclick="load_index(this,'guangyuan');" >广元</a></li>
+    <li><a href="http://m.58.com/ganzi/http://p.m.58.com/" onclick="load_index(this,'ganzi');"  class="nobor nobor2">甘孜</a></li>
+    <li><a href="http://m.58.com/guoluo/http://p.m.58.com/" onclick="load_index(this,'guoluo');"  class="nobor2">果洛</a></li>
+    <li><a href="http://m.58.com/gn/http://p.m.58.com/" onclick="load_index(this,'gn');"  class="nobor2">甘南</a></li>
+</ul>
+
+<h4><p><span>H</span>(以H为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/hz/http://p.m.58.com/" onclick="load_index(this,'hz');"  class="nobor">杭州</a></li>
+    <li><a href="http://m.58.com/hrb/http://p.m.58.com/" onclick="load_index(this,'hrb');" >哈尔滨</a></li>
+    <li><a href="http://m.58.com/haikou/http://p.m.58.com/" onclick="load_index(this,'haikou');" >海口</a></li>
+    <li><a href="http://m.58.com/hf/http://p.m.58.com/" onclick="load_index(this,'hf');"  class="nobor">合肥</a></li>
+    <li><a href="http://m.58.com/hu/http://p.m.58.com/" onclick="load_index(this,'hu');" >呼和浩特</a></li>
+    <li><a href="http://m.58.com/huizhou/http://p.m.58.com/" onclick="load_index(this,'huizhou');" >惠州</a></li>
+    <li><a href="http://m.58.com/hy/http://p.m.58.com/" onclick="load_index(this,'hy');"  class="nobor">衡阳</a></li>
+    <li><a href="http://m.58.com/hd/http://p.m.58.com/" onclick="load_index(this,'hd');" >邯郸</a></li>
+    <li><a href="http://m.58.com/huzhou/http://p.m.58.com/" onclick="load_index(this,'huzhou');" >湖州</a></li>
+    <li><a href="http://m.58.com/hs/http://p.m.58.com/" onclick="load_index(this,'hs');"  class="nobor">衡水</a></li>
+    <li><a href="http://m.58.com/hanzhong/http://p.m.58.com/" onclick="load_index(this,'hanzhong');" >汉中</a></li>
+    <li><a href="http://m.58.com/ha/http://p.m.58.com/" onclick="load_index(this,'ha');" >淮安</a></li>
+    <li><a href="http://m.58.com/hshi/http://p.m.58.com/" onclick="load_index(this,'hshi');"  class="nobor">黄石</a></li>
+    <li><a href="http://m.58.com/hlr/http://p.m.58.com/" onclick="load_index(this,'hlr');" >海拉尔</a></li>
+    <li><a href="http://m.58.com/heze/http://p.m.58.com/" onclick="load_index(this,'heze');" >菏泽</a></li>
+    <li><a href="http://m.58.com/hh/http://p.m.58.com/" onclick="load_index(this,'hh');"  class="nobor">怀化</a></li>
+    <li><a href="http://m.58.com/hg/http://p.m.58.com/" onclick="load_index(this,'hg');" >黄冈</a></li>
+    <li><a href="http://m.58.com/hc/http://p.m.58.com/" onclick="load_index(this,'hc');" >河池</a></li>
+    <li><a href="http://m.58.com/hami/http://p.m.58.com/" onclick="load_index(this,'hami');"  class="nobor">哈密</a></li>
+    <li><a href="http://m.58.com/honghe/http://p.m.58.com/" onclick="load_index(this,'honghe');" >红河</a></li>
+    <li><a href="http://m.58.com/hegang/http://p.m.58.com/" onclick="load_index(this,'hegang');" >鹤岗</a></li>
+    <li><a href="http://m.58.com/hb/http://p.m.58.com/" onclick="load_index(this,'hb');"  class="nobor">鹤壁</a></li>
+    <li><a href="http://m.58.com/hn/http://p.m.58.com/" onclick="load_index(this,'hn');" >淮南</a></li>
+    <li><a href="http://m.58.com/huaibei/http://p.m.58.com/" onclick="load_index(this,'huaibei');" >淮北</a></li>
+    <li><a href="http://m.58.com/huangshan/http://p.m.58.com/" onclick="load_index(this,'huangshan');"  class="nobor">黄山</a></li>
+    <li><a href="http://m.58.com/ht/http://p.m.58.com/" onclick="load_index(this,'ht');" >和田</a></li>
+    <li><a href="http://m.58.com/huangnan/http://p.m.58.com/" onclick="load_index(this,'huangnan');" >黄南</a></li>
+    <li><a href="http://m.58.com/hx/http://p.m.58.com/" onclick="load_index(this,'hx');"  class="nobor">海西</a></li>
+    <li><a href="http://m.58.com/hainan/http://p.m.58.com/" onclick="load_index(this,'hainan');" >海南</a></li>
+    <li><a href="http://m.58.com/haidong/http://p.m.58.com/" onclick="load_index(this,'haidong');" >海东</a></li>
+    <li><a href="http://m.58.com/haibei/http://p.m.58.com/" onclick="load_index(this,'haibei');"  class="nobor">海北</a></li>
+    <li><a href="http://m.58.com/hlbe/http://p.m.58.com/" onclick="load_index(this,'hlbe');" >呼伦贝尔</a></li>
+    <li><a href="http://m.58.com/hld/http://p.m.58.com/" onclick="load_index(this,'hld');" >葫芦岛</a></li>
+    <li><a href="http://m.58.com/heyuan/http://p.m.58.com/" onclick="load_index(this,'heyuan');"  class="nobor">河源</a></li>
+    <li><a href="http://m.58.com/hezhou/http://p.m.58.com/" onclick="load_index(this,'hezhou');" >贺州</a></li>
+    <li><a href="http://m.58.com/heihe/http://p.m.58.com/" onclick="load_index(this,'heihe');" >黑河</a></li>
+    <li><a href="http://m.58.com/hexian/http://p.m.58.com/" onclick="load_index(this,'hexian');"  class="nobor nobor2">和县</a></li>
+    <li><a href="http://m.58.com/hq/http://p.m.58.com/" onclick="load_index(this,'hq');"  class="nobor2 bor_r">霍邱</a></li>
+    <li><a href="http://m.58.com/huidong/http://p.m.58.com/" onclick="load_index(this,'huidong');"  class="nobor2 bor_r">惠东</a></li>
+    <li><a href="http://m.58.com/haimen/http://p.m.58.com/" onclick="load_index(this,'haimen');"  class="nobor2 bor_r">海门</a></li>
+    <li><a href="http://m.58.com/haining/http://p.m.58.com/" onclick="load_index(this,'haining');"  class="nobor2 bor_r">海宁</a></li>
+    <li><a href="http://m.58.com/haian/http://p.m.58.com/" onclick="load_index(this,'haian');"  class="nobor2 bor_r">海安</a></li>
+</ul>
+
+<h4><p><span>J</span>(以J为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/jn/http://p.m.58.com/" onclick="load_index(this,'jn');"  class="nobor">济南</a></li>
+    <li><a href="http://m.58.com/jining/http://p.m.58.com/" onclick="load_index(this,'jining');" >济宁</a></li>
+    <li><a href="http://m.58.com/jx/http://p.m.58.com/" onclick="load_index(this,'jx');" >嘉兴</a></li>
+    <li><a href="http://m.58.com/jm/http://p.m.58.com/" onclick="load_index(this,'jm');"  class="nobor">江门</a></li>
+    <li><a href="http://m.58.com/jh/http://p.m.58.com/" onclick="load_index(this,'jh');" >金华</a></li>
+    <li><a href="http://m.58.com/jl/http://p.m.58.com/" onclick="load_index(this,'jl');" >吉林</a></li>
+    <li><a href="http://m.58.com/jy/http://p.m.58.com/" onclick="load_index(this,'jy');"  class="nobor">揭阳</a></li>
+    <li><a href="http://m.58.com/jj/http://p.m.58.com/" onclick="load_index(this,'jj');" >九江</a></li>
+    <li><a href="http://m.58.com/jiaozuo/http://p.m.58.com/" onclick="load_index(this,'jiaozuo');" >焦作</a></li>
+    <li><a href="http://m.58.com/jincheng/http://p.m.58.com/" onclick="load_index(this,'jincheng');"  class="nobor">晋城</a></li>
+    <li><a href="http://m.58.com/jingzhou/http://p.m.58.com/" onclick="load_index(this,'jingzhou');" >荆州</a></li>
+    <li><a href="http://m.58.com/jms/http://p.m.58.com/" onclick="load_index(this,'jms');" >佳木斯</a></li>
+    <li><a href="http://m.58.com/jixi/http://p.m.58.com/" onclick="load_index(this,'jixi');"  class="nobor">鸡西</a></li>
+    <li><a href="http://m.58.com/ja/http://p.m.58.com/" onclick="load_index(this,'ja');" >吉安</a></li>
+    <li><a href="http://m.58.com/jinchang/http://p.m.58.com/" onclick="load_index(this,'jinchang');" >金昌</a></li>
+    <li><a href="http://m.58.com/jz/http://p.m.58.com/" onclick="load_index(this,'jz');"  class="nobor">晋中</a></li>
+    <li><a href="http://m.58.com/jinzhou/http://p.m.58.com/" onclick="load_index(this,'jinzhou');" >锦州</a></li>
+    <li><a href="http://m.58.com/jdz/http://p.m.58.com/" onclick="load_index(this,'jdz');" >景德镇</a></li>
+    <li><a href="http://m.58.com/jingmen/http://p.m.58.com/" onclick="load_index(this,'jingmen');"  class="nobor">荆门</a></li>
+    <li><a href="http://m.58.com/jyg/http://p.m.58.com/" onclick="load_index(this,'jyg');" >嘉峪关</a></li>
+    <li><a href="http://m.58.com/jq/http://p.m.58.com/" onclick="load_index(this,'jq');" >酒泉</a></li>
+    <li><a href="http://m.58.com/jiyuan/http://p.m.58.com/" onclick="load_index(this,'jiyuan');"  class="nobor nobor2 bor_r">济源</a></li>
+    <li><a href="http://m.58.com/jinjiangshi/http://p.m.58.com/" onclick="load_index(this,'jinjiangshi');"  class="nobor nobor2 bor_r">晋江</a></li>
+    <li><a href="http://m.58.com/jingjiang/http://p.m.58.com/" onclick="load_index(this,'jingjiang');"  class="nobor nobor2 bor_r">靖江</a></li>
+     <li><a href="http://m.58.com/jianhu/http://p.m.58.com/" onclick="load_index(this,'jianhu');"  class="nobor nobor2 bor_r">建湖</a></li>
+      <li><a href="http://m.58.com/jiashanx/http://p.m.58.com/" onclick="load_index(this,'jiashanx');"  class="nobor nobor2 bor_r">嘉善</a></li>
+</ul>
+
+<h4><p><span>K</span>(以K为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+<li><a href="http://m.58.com/km/http://p.m.58.com/" onclick="load_index(this,'km');"  class="nobor">昆明</a></li>
+    <li><a href="http://m.58.com/klmy/http://p.m.58.com/" onclick="load_index(this,'klmy');" >克拉玛依</a></li>
+    <li><a href="http://m.58.com/kaifeng/http://p.m.58.com/" onclick="load_index(this,'kaifeng');"  class="nobor">开封</a></li>
+    <li><a href="http://m.58.com/ks/http://p.m.58.com/" onclick="load_index(this,'ks');" >喀什</a></li>
+    <li><a href="http://m.58.com/kzls/http://p.m.58.com/" onclick="load_index(this,'kzls');" >克孜勒苏</a></li>
+    <li><a href="http://m.58.com/kl/http://p.m.58.com/" onclick="load_index(this,'kl');"  class="nobor nobor2 bor_r">垦利</a></li>
+</ul>
+
+<h4><p><span>L</span>(以L为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/lz/http://p.m.58.com/" onclick="load_index(this,'lz');"  class="nobor">兰州</a></li>
+    <li><a href="http://m.58.com/luoyang/http://p.m.58.com/" onclick="load_index(this,'luoyang');" >洛阳</a></li>
+    <li><a href="http://m.58.com/lf/http://p.m.58.com/" onclick="load_index(this,'lf');" >廊坊</a></li>
+    <li><a href="http://m.58.com/linyi/http://p.m.58.com/" onclick="load_index(this,'linyi');"  class="nobor">临沂</a></li>
+    <li><a href="http://m.58.com/lc/http://p.m.58.com/" onclick="load_index(this,'lc');" >聊城</a></li>
+    <li><a href="http://m.58.com/lyg/http://p.m.58.com/" onclick="load_index(this,'lyg');" >连云港</a></li>
+    <li><a href="http://m.58.com/lvliang/http://p.m.58.com/" onclick="load_index(this,'lvliang');"  class="nobor">吕梁</a></li>
+    <li><a href="http://m.58.com/ls/http://p.m.58.com/" onclick="load_index(this,'ls');" >乐山</a></li>
+    <li><a href="http://m.58.com/liaoyang/http://p.m.58.com/" onclick="load_index(this,'liaoyang');" >辽阳</a></li>
+    <li><a href="http://m.58.com/liaoyuan/http://p.m.58.com/" onclick="load_index(this,'liaoyuan');"  class="nobor">辽源</a></li>
+    <li><a href="http://m.58.com/lasa/http://p.m.58.com/" onclick="load_index(this,'lasa');" >拉萨</a></li>
+    <li><a href="http://m.58.com/linfen/http://p.m.58.com/" onclick="load_index(this,'linfen');" >临汾</a></li>
+    <li><a href="http://m.58.com/ly/http://p.m.58.com/" onclick="load_index(this,'ly');"  class="nobor">龙岩</a></li>
+    <li><a href="http://m.58.com/linxia/http://p.m.58.com/" onclick="load_index(this,'linxia');" >临夏</a></li>
+    <li><a href="http://m.58.com/liuzhou/http://p.m.58.com/" onclick="load_index(this,'liuzhou');" >柳州</a></li>
+    <li><a href="http://m.58.com/luohe/http://p.m.58.com/" onclick="load_index(this,'luohe');"  class="nobor">漯河</a></li>
+    <li><a href="http://m.58.com/luzhou/http://p.m.58.com/" onclick="load_index(this,'luzhou');" >泸州</a></li>
+    <li><a href="http://m.58.com/lishui/http://p.m.58.com/" onclick="load_index(this,'lishui');" >丽水</a></li>
+    <li><a href="http://m.58.com/lj/http://p.m.58.com/" onclick="load_index(this,'lj');"  class="nobor">丽江</a></li>
+    <li><a href="http://m.58.com/la/http://p.m.58.com/" onclick="load_index(this,'la');" >六安</a></li>
+    <li><a href="http://m.58.com/lw/http://p.m.58.com/" onclick="load_index(this,'lw');" >莱芜</a></li>
+    <li><a href="http://m.58.com/linyixian/http://p.m.58.com/" onclick="load_index(this,'linyixian');"  class="nobor">临猗</a></li>
+    <li><a href="http://m.58.com/lincang/http://p.m.58.com/" onclick="load_index(this,'lincang');" >临沧</a></li>
+    <li><a href="http://m.58.com/linzhi/http://p.m.58.com/" onclick="load_index(this,'linzhi');" >林芝</a></li>
+    <li><a href="http://m.58.com/liangshan/http://p.m.58.com/" onclick="load_index(this,'liangshan');"  class="nobor">凉山</a></li>
+    <li><a href="http://m.58.com/ld/http://p.m.58.com/" onclick="load_index(this,'ld');" >娄底</a></li>
+    <li><a href="http://m.58.com/ln/http://p.m.58.com/" onclick="load_index(this,'ln');" >陇南</a></li>
+    <li><a href="http://m.58.com/lb/http://p.m.58.com/" onclick="load_index(this,'lb');"  class="nobor nobor2">来宾</a></li>
+    <li><a href="http://m.58.com/lps/http://p.m.58.com/" onclick="load_index(this,'lps');"  class="nobor2 bor_r">六盘水</a></li>
+    <li><a href="http://m.58.com/lingshui/http://p.m.58.com/" onclick="load_index(this,'lingshui');"  class="nobor2 bor_r">陵水</a></li>
+    <li><a href="http://m.58.com/liyang/http://p.m.58.com/" onclick="load_index(this,'liyang');"  class="nobor2 bor_r">溧阳</a></li>
+    <li><a href="http://m.58.com/longkou/http://p.m.58.com/" onclick="load_index(this,'longkou');"  class="nobor2 bor_r">龙口</a></li>
+</ul>
+
+<h4><p><span>M</span>(以M为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/mianyang/http://p.m.58.com/" onclick="load_index(this,'mianyang');"  class="nobor">绵阳</a></li>
+    <li><a href="http://m.58.com/mm/http://p.m.58.com/" onclick="load_index(this,'mm');" >茂名</a></li>
+    <li><a href="http://m.58.com/mas/http://p.m.58.com/" onclick="load_index(this,'mas');" >马鞍山</a></li>
+    <li><a href="http://m.58.com/mdj/http://p.m.58.com/" onclick="load_index(this,'mdj');"  class="nobor">牡丹江</a></li>
+    <li><a href="http://m.58.com/mg/http://p.m.58.com/" onclick="load_index(this,'mg');" >明港</a></li>
+    <li><a href="http://m.58.com/mz/http://p.m.58.com/" onclick="load_index(this,'mz');" >梅州</a></li>
+    <li><a href="http://m.58.com/ms/http://p.m.58.com/" onclick="load_index(this,'ms');"  class="nobor nobor2 bor_r">眉山</a></li>
+</ul>
+
+<h4><p><span>N</span>(以N为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/nj/http://p.m.58.com/" onclick="load_index(this,'nj');"  class="nobor">南京</a></li>
+    <li><a href="http://m.58.com/nc/http://p.m.58.com/" onclick="load_index(this,'nc');" >南昌</a></li>
+    <li><a href="http://m.58.com/nb/http://p.m.58.com/" onclick="load_index(this,'nb');" >宁波</a></li>
+    <li><a href="http://m.58.com/nn/http://p.m.58.com/" onclick="load_index(this,'nn');"  class="nobor">南宁</a></li>
+    <li><a href="http://m.58.com/ny/http://p.m.58.com/" onclick="load_index(this,'ny');" >南阳</a></li>
+    <li><a href="http://m.58.com/nt/http://p.m.58.com/" onclick="load_index(this,'nt');" >南通</a></li>
+    <li><a href="http://m.58.com/scnj/http://p.m.58.com/" onclick="load_index(this,'scnj');"  class="nobor">内江</a></li>
+    <li><a href="http://m.58.com/nd/http://p.m.58.com/" onclick="load_index(this,'nd');" >宁德</a></li>
+    <li><a href="http://m.58.com/nanchong/http://p.m.58.com/" onclick="load_index(this,'nanchong');" >南充</a></li>
+    <li><a href="http://m.58.com/nujiang/http://p.m.58.com/" onclick="load_index(this,'nujiang');"  class="nobor nobor2">怒江</a></li>
+    <li><a href="http://m.58.com/nq/http://p.m.58.com/" onclick="load_index(this,'nq');"  class="nobor2">那曲</a></li>
+    <li><a href="http://m.58.com/np/http://p.m.58.com/" onclick="load_index(this,'np');"  class="nobor2">南平</a></li>
+    <li><a href="http://m.58.com/ningguo/http://p.m.58.com/" onclick="load_index(this,'ningguo');"  class="nobor2">宁国</a></li>
+    <li><a href="http://m.58.com/nananshi/http://p.m.58.com/" onclick="load_index(this,'nananshi');"  class="nobor2">南安</a></li>
+</ul>
+
+<h4><p><span>P</span>(以P为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/pds/http://p.m.58.com/" onclick="load_index(this,'pds');"  class="nobor">平顶山</a></li>
+    <li><a href="http://m.58.com/pj/http://p.m.58.com/" onclick="load_index(this,'pj');" >盘锦</a></li>
+    <li><a href="http://m.58.com/px/http://p.m.58.com/" onclick="load_index(this,'px');" >萍乡</a></li>
+    <li><a href="http://m.58.com/pl/http://p.m.58.com/" onclick="load_index(this,'pl');"  class="nobor">平凉</a></li>
+    <li><a href="http://m.58.com/puyang/http://p.m.58.com/" onclick="load_index(this,'puyang');" >濮阳</a></li>
+    <li><a href="http://m.58.com/panzhihua/http://p.m.58.com/" onclick="load_index(this,'panzhihua');" >攀枝花</a></li>
+    <li><a href="http://m.58.com/pt/http://p.m.58.com/" onclick="load_index(this,'pt');"  class="nobor nobor2">莆田</a></li>
+    <li><a href="http://m.58.com/pe/http://p.m.58.com/" onclick="load_index(this,'pe');"  class="nobor2 bor_r">普洱</a></li>
+    <li><a href="http://m.58.com/pizhou/http://p.m.58.com/" onclick="load_index(this,'pizhou');"  class="nobor2 bor_r">邳州</a></li>
+     <li><a href="http://m.58.com/xzpeixian/http://p.m.58.com/" onclick="load_index(this,'xzpeixian');"  class="nobor2 bor_r">沛县</a></li>
+</ul>
+
+<h4><p><span>Q</span>(以Q为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/qd/http://p.m.58.com/" onclick="load_index(this,'qd');"  class="nobor">青岛</a></li>
+    <li><a href="http://m.58.com/qz/http://p.m.58.com/" onclick="load_index(this,'qz');" >泉州</a></li>
+    <li><a href="http://m.58.com/qhd/http://p.m.58.com/" onclick="load_index(this,'qhd');" >秦皇岛</a></li>
+    <li><a href="http://m.58.com/cn/http://p.m.58.com/" onclick="load_index(this,'cn');"  class="nobor">其他</a></li>
+    <li><a href="http://m.58.com/qqhr/http://p.m.58.com/" onclick="load_index(this,'qqhr');" >齐齐哈尔</a></li>
+    <li><a href="http://m.58.com/quzhou/http://p.m.58.com/" onclick="load_index(this,'quzhou');" >衢州</a></li>
+    <li><a href="http://m.58.com/qingyuan/http://p.m.58.com/" onclick="load_index(this,'qingyuan');"  class="nobor">清远</a></li>
+    <li><a href="http://m.58.com/qinzhou/http://p.m.58.com/" onclick="load_index(this,'qinzhou');" >钦州</a></li>
+    <li><a href="http://m.58.com/qj/http://p.m.58.com/" onclick="load_index(this,'qj');" >曲靖</a></li>
+    <li><a href="http://m.58.com/qdn/http://p.m.58.com/" onclick="load_index(this,'qdn');"  class="nobor">黔东南</a></li>
+    <li><a href="http://m.58.com/qingyang/http://p.m.58.com/" onclick="load_index(this,'qingyang');" >庆阳</a></li>
+    <li><a href="http://m.58.com/qn/http://p.m.58.com/" onclick="load_index(this,'qn');" >黔南</a></li>
+    <li><a href="http://m.58.com/qxn/http://p.m.58.com/" onclick="load_index(this,'qxn');"  class="nobor">黔西南</a></li>
+    <li><a href="http://m.58.com/qth/http://p.m.58.com/" onclick="load_index(this,'qth');" >七台河</a></li>
+    <li><a href="http://m.58.com/qianjiang/http://p.m.58.com/" onclick="load_index(this,'qianjiang');" >潜江</a></li>
+    <li><a href="http://m.58.com/qingxu/http://p.m.58.com/" onclick="load_index(this,'qingxu');"  class="nobor nobor2 bor_r">清徐</a></li>
+    <li><a href="http://m.58.com/qh/http://p.m.58.com/" onclick="load_index(this,'qh');" >琼海</a></li>
+    <li><a href="http://m.58.com/qiongzhong/http://p.m.58.com/" onclick="load_index(this,'qiongzhong');"  class="nobor nobor2 bor_r">琼中</a></li>
+    <li><a href="http://m.58.com/qidong/http://p.m.58.com/" onclick="load_index(this,'qidong');"  class="nobor nobor2 bor_r">启东</a></li>
+</ul>
+
+<h4><p><span>R</span>(以R为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/rizhao/http://p.m.58.com/" onclick="load_index(this,'rizhao');"  class="nobor nobor2">日照</a></li>
+    <li><a href="http://m.58.com/rkz/http://p.m.58.com/" onclick="load_index(this,'rkz');"  class="nobor2 bor_r">日喀则</a></li>
+    <li><a href="http://m.58.com/ruiancity/http://p.m.58.com/" onclick="load_index(this,'ruiancity');"  class="nobor2 bor_r">瑞安</a></li>
+    <li><a href="http://m.58.com/rugao/http://p.m.58.com/" onclick="load_index(this,'rugao');"  class="nobor2 bor_r">如皋</a></li>
+    <li><a href="http://m.58.com/rudong/http://p.m.58.com/" onclick="load_index(this,'rudong');"  class="nobor2 bor_r">如东</a></li>
+</ul>
+
+<h4><p><span>S</span>(以S为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/sh/http://p.m.58.com/" onclick="load_index(this,'sh');"  class="nobor">上海</a></li>
+    <li><a href="http://m.58.com/sz/http://p.m.58.com/" onclick="load_index(this,'sz');" >深圳</a></li>
+    <li><a href="http://m.58.com/su/http://p.m.58.com/" onclick="load_index(this,'su');" >苏州</a></li>
+    <li><a href="http://m.58.com/sy/http://p.m.58.com/" onclick="load_index(this,'sy');"  class="nobor">沈阳</a></li>
+    <li><a href="http://m.58.com/sjz/http://p.m.58.com/" onclick="load_index(this,'sjz');" >石家庄</a></li>
+    <li><a href="http://m.58.com/st/http://p.m.58.com/" onclick="load_index(this,'st');" >汕头</a></li>
+    <li><a href="http://m.58.com/suzhou/http://p.m.58.com/" onclick="load_index(this,'suzhou');"  class="nobor">宿州</a></li>
+    <li><a href="http://m.58.com/sx/http://p.m.58.com/" onclick="load_index(this,'sx');" >绍兴</a></li>
+    <li><a href="http://m.58.com/shiyan/http://p.m.58.com/" onclick="load_index(this,'shiyan');" >十堰</a></li>
+    <li><a href="http://m.58.com/sm/http://p.m.58.com/" onclick="load_index(this,'sm');"  class="nobor">三明</a></li>
+    <li><a href="http://m.58.com/sg/http://p.m.58.com/" onclick="load_index(this,'sg');" >韶关</a></li>
+    <li><a href="http://m.58.com/sq/http://p.m.58.com/" onclick="load_index(this,'sq');" >商丘</a></li>
+    <li><a href="http://m.58.com/shuyang/http://p.m.58.com/" onclick="load_index(this,'shuyang');"  class="nobor">沭阳</a></li>
+    <li><a href="http://m.58.com/suqian/http://p.m.58.com/" onclick="load_index(this,'suqian');" >宿迁</a></li>
+    <li><a href="http://m.58.com/suihua/http://p.m.58.com/" onclick="load_index(this,'suihua');" >绥化</a></li>
+    <li><a href="http://m.58.com/shaoyang/http://p.m.58.com/" onclick="load_index(this,'shaoyang');"  class="nobor">邵阳</a></li>
+    <li><a href="http://m.58.com/sanya/http://p.m.58.com/" onclick="load_index(this,'sanya');" >三亚</a></li>
+    <li><a href="http://m.58.com/sd/http://p.m.58.com/" onclick="load_index(this,'sd');" >顺德</a></li>
+    <li><a href="http://m.58.com/songyuan/http://p.m.58.com/" onclick="load_index(this,'songyuan');"  class="nobor">松原</a></li>
+    <li><a href="http://m.58.com/smx/http://p.m.58.com/" onclick="load_index(this,'smx');" >三门峡</a></li>
+    <li><a href="http://m.58.com/sw/http://p.m.58.com/" onclick="load_index(this,'sw');" >汕尾</a></li>
+    <li><a href="http://m.58.com/suizhou/http://p.m.58.com/" onclick="load_index(this,'suizhou');"  class="nobor">随州</a></li>
+    <li><a href="http://m.58.com/shz/http://p.m.58.com/" onclick="load_index(this,'shz');" >石河子</a></li>
+    <li><a href="http://m.58.com/sn/http://p.m.58.com/" onclick="load_index(this,'sn');" >山南</a></li>
+    <li><a href="http://m.58.com/suining/http://p.m.58.com/" onclick="load_index(this,'suining');"  class="nobor">遂宁</a></li>
+    <li><a href="http://m.58.com/sl/http://p.m.58.com/" onclick="load_index(this,'sl');" >商洛</a></li>
+    <li><a href="http://m.58.com/shuozhou/http://p.m.58.com/" onclick="load_index(this,'shuozhou');" >朔州</a></li>
+    <li><a href="http://m.58.com/szs/http://p.m.58.com/" onclick="load_index(this,'szs');"  class="nobor">石嘴山</a></li>
+    <li><a href="http://m.58.com/sr/http://p.m.58.com/" onclick="load_index(this,'sr');"  class="">上饶</a></li>
+    <li><a href="http://m.58.com/sp/http://p.m.58.com/" onclick="load_index(this,'sp');" >四平</a></li>
+    <li><a href="http://m.58.com/sys/http://p.m.58.com/" onclick="load_index(this,'sys');"  class="nobor nobor2">双鸭山</a></li>
+    <li><a href="http://m.58.com/snj/http://p.m.58.com/" onclick="load_index(this,'snj');"  class="nobor2 bor_r">神农架</a></li>
+    <li><a href="http://m.58.com/sansha/http://p.m.58.com/" onclick="load_index(this,'sansha');"  class="nobor2 bor_r">三沙</a></li>
+    <li><a href="http://m.58.com/shouguang/http://p.m.58.com/" onclick="load_index(this,'shouguang');"  class="nobor2 bor_r">寿光</a></li>
+    <li><a href="http://m.58.com/shishi/http://p.m.58.com/" onclick="load_index(this,'shishi');"  class="nobor2 bor_r">石狮</a></li>
+</ul>
+
+<h4><p><span>T</span>(以T为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/tj/http://p.m.58.com/" onclick="load_index(this,'tj');"  class="nobor">天津</a></li>
+    <li><a href="http://m.58.com/ty/http://p.m.58.com/" onclick="load_index(this,'ty');" >太原</a></li>
+    <li><a href="http://m.58.com/ts/http://p.m.58.com/" onclick="load_index(this,'ts');" >唐山</a></li>
+    <li><a href="http://m.58.com/ta/http://p.m.58.com/" onclick="load_index(this,'ta');"  class="nobor">泰安</a></li>
+    <li><a href="http://m.58.com/tz/http://p.m.58.com/" onclick="load_index(this,'tz');" >台州</a></li>
+    <li><a href="http://m.58.com/taizhou/http://p.m.58.com/" onclick="load_index(this,'taizhou');" >泰州</a></li>
+    <li><a href="http://m.58.com/tw/http://p.m.58.com/" onclick="load_index(this,'tw');"  class="nobor">台湾</a></li>
+    <li><a href="http://m.58.com/tl/http://p.m.58.com/" onclick="load_index(this,'tl');" >铁岭</a></li>
+    <li><a href="http://m.58.com/tianshui/http://p.m.58.com/" onclick="load_index(this,'tianshui');" >天水</a></li>
+    <li><a href="http://m.58.com/tlf/http://p.m.58.com/" onclick="load_index(this,'tlf');"  class="nobor">吐鲁番</a></li>
+    <li><a href="http://m.58.com/tmsk/http://p.m.58.com/" onclick="load_index(this,'tmsk');" >图木舒克</a></li>
+    <li><a href="http://m.58.com/tc/http://p.m.58.com/" onclick="load_index(this,'tc');" >铜川</a></li>
+    <li><a href="http://m.58.com/tongliao/http://p.m.58.com/" onclick="load_index(this,'tongliao');"  class="nobor">通辽</a></li>
+    <li><a href="http://m.58.com/th/http://p.m.58.com/" onclick="load_index(this,'th');" >通化</a></li>
+    <li><a href="http://m.58.com/tongling/http://p.m.58.com/" onclick="load_index(this,'tongling');" >铜陵</a></li>
+    <li><a href="http://m.58.com/tr/http://p.m.58.com/" onclick="load_index(this,'tr');"  class="nobor">铜仁</a></li>
+    <li><a href="http://m.58.com/tm/http://p.m.58.com/" onclick="load_index(this,'tm');" >天门</a></li>
+    <li><a href="http://m.58.com/taishan/http://p.m.58.com/" onclick="load_index(this,'taishan');" >台山</a></li>
+    <li><a href="http://m.58.com/tongcheng/http://p.m.58.com/" onclick="load_index(this,'tongcheng');"  class="nobor nobor2 bor_r">桐城</a></li>
+    <li><a href="http://m.58.com/tac/http://p.m.58.com/" onclick="load_index(this,'tac');" >塔城</a></li>
+    <li><a href="http://m.58.com/tunchang/http://p.m.58.com/" onclick="load_index(this,'tunchang');"  class="nobor nobor2 bor_r">屯昌</a></li>
+    <li><a href="http://m.58.com/tongxiang/http://p.m.58.com/" onclick="load_index(this,'tongxiang');"  class="nobor nobor2 bor_r">桐乡</a></li>
+     <li><a href="http://m.58.com/tianchang/http://p.m.58.com/" onclick="load_index(this,'tianchang');"  class="nobor nobor2 bor_r">天长</a></li>
+       <li><a href="http://m.58.com/taixing/http://p.m.58.com/" onclick="load_index(this,'taixing');"  class="nobor nobor2 bor_r">泰兴</a></li>
+</ul>
+
+<h4><p><span>W</span>(以W为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/wh/http://p.m.58.com/" onclick="load_index(this,'wh');"  class="nobor">武汉</a></li>
+    <li><a href="http://m.58.com/wx/http://p.m.58.com/" onclick="load_index(this,'wx');" >无锡</a></li>
+    <li><a href="http://m.58.com/wf/http://p.m.58.com/" onclick="load_index(this,'wf');" >潍坊</a></li>
+    <li><a href="http://m.58.com/xj/http://p.m.58.com/" onclick="load_index(this,'xj');"  class="nobor">乌鲁木齐</a></li>
+    <li><a href="http://m.58.com/wz/http://p.m.58.com/" onclick="load_index(this,'wz');" >温州</a></li>
+    <li><a href="http://m.58.com/weihai/http://p.m.58.com/" onclick="load_index(this,'weihai');" >威海</a></li>
+    <li><a href="http://m.58.com/wuhu/http://p.m.58.com/" onclick="load_index(this,'wuhu');"  class="nobor">芜湖</a></li>
+    <li><a href="http://m.58.com/wuzhou/http://p.m.58.com/" onclick="load_index(this,'wuzhou');" >梧州</a></li>
+    <li><a href="http://m.58.com/wfd/http://p.m.58.com/" onclick="load_index(this,'wfd');" >瓦房店</a></li>
+    <li><a href="http://m.58.com/wn/http://p.m.58.com/" onclick="load_index(this,'wn');"  class="nobor">渭南</a></li>
+    <li><a href="http://m.58.com/ws/http://p.m.58.com/" onclick="load_index(this,'ws');" >文山</a></li>
+    <li><a href="http://m.58.com/wuhai/http://p.m.58.com/" onclick="load_index(this,'wuhai');" >乌海</a></li>
+    <li><a href="http://m.58.com/wjq/http://p.m.58.com/" onclick="load_index(this,'wjq');"  class="nobor">五家渠</a></li>
+    <li><a href="http://m.58.com/wuzhong/http://p.m.58.com/" onclick="load_index(this,'wuzhong');" >吴忠</a></li>
+    <li><a href="http://m.58.com/wlcb/http://p.m.58.com/" onclick="load_index(this,'wlcb');" >乌兰察布</a></li>
+    <li><a href="http://m.58.com/wuwei/http://p.m.58.com/" onclick="load_index(this,'wuwei');"  class="nobor nobor2">武威</a></li>
+    <li><a href="http://m.58.com/wzs/http://p.m.58.com/" onclick="load_index(this,'wzs');"  class="nobor2">五指山</a></li>
+    <li><a href="http://m.58.com/wuyishan/http://p.m.58.com/" onclick="load_index(this,'wuyishan');"  class="nobor2">武夷山</a></li>
+    <li><a href="http://m.58.com/wanning/http://p.m.58.com/" onclick="load_index(this,'wanning');"  class="nobor2">万宁</a></li>
+    <li><a href="http://m.58.com/wenchang/http://p.m.58.com/" onclick="load_index(this,'wenchang');"  class="nobor2">文昌</a></li>
+    <li><a href="http://m.58.com/wenling/http://p.m.58.com/" onclick="load_index(this,'wenling');"  class="nobor2">温岭</a></li>
+</ul>
+
+<h4><p><span>X</span>(以X为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/xa/http://p.m.58.com/" onclick="load_index(this,'xa');"  class="nobor">西安</a></li>
+    <li><a href="http://m.58.com/xm/http://p.m.58.com/" onclick="load_index(this,'xm');" >厦门</a></li>
+    <li><a href="http://m.58.com/xz/http://p.m.58.com/" onclick="load_index(this,'xz');" >徐州</a></li>
+    <li><a href="http://m.58.com/xiangtan/http://p.m.58.com/" onclick="load_index(this,'xiangtan');"  class="nobor">湘潭</a></li>
+    <li><a href="http://m.58.com/xf/http://p.m.58.com/" onclick="load_index(this,'xf');" >襄阳</a></li>
+    <li><a href="http://m.58.com/xx/http://p.m.58.com/" onclick="load_index(this,'xx');" >新乡</a></li>
+    <li><a href="http://m.58.com/xt/http://p.m.58.com/" onclick="load_index(this,'xt');"  class="nobor">邢台</a></li>
+    <li><a href="http://m.58.com/xiaogan/http://p.m.58.com/" onclick="load_index(this,'xiaogan');" >孝感</a></li>
+    <li><a href="http://m.58.com/xn/http://p.m.58.com/" onclick="load_index(this,'xn');" >西宁</a></li>
+    <li><a href="http://m.58.com/xc/http://p.m.58.com/" onclick="load_index(this,'xc');"  class="nobor">许昌</a></li>
+    <li><a href="http://m.58.com/hk/http://p.m.58.com/" onclick="load_index(this,'hk');" >香港</a></li>
+    <li><a href="http://m.58.com/xinzhou/http://p.m.58.com/" onclick="load_index(this,'xinzhou');" >忻州</a></li>
+    <li><a href="http://m.58.com/xuancheng/http://p.m.58.com/" onclick="load_index(this,'xuancheng');"  class="nobor">宣城</a></li>
+    <li><a href="http://m.58.com/bn/http://p.m.58.com/" onclick="load_index(this,'bn');" >西双版纳</a></li>
+    <li><a href="http://m.58.com/xl/http://p.m.58.com/" onclick="load_index(this,'xl');" >锡林郭勒盟</a></li>
+    <li><a href="http://m.58.com/xianyang/http://p.m.58.com/" onclick="load_index(this,'xianyang');"  class="nobor">咸阳</a></li>
+    <li><a href="http://m.58.com/xy/http://p.m.58.com/" onclick="load_index(this,'xy');" >信阳</a></li>
+    <li><a href="http://m.58.com/xam/http://p.m.58.com/" onclick="load_index(this,'xam');" >兴安盟</a></li>
+    <li><a href="http://m.58.com/xinyu/http://p.m.58.com/" onclick="load_index(this,'xinyu');"  class="nobor">新余</a></li>
+    <li><a href="http://m.58.com/xiangxi/http://p.m.58.com/" onclick="load_index(this,'xiangxi');" >湘西</a></li>
+    <li><a href="http://m.58.com/xiantao/http://p.m.58.com/" onclick="load_index(this,'xiantao');" >仙桃</a></li>
+    <li><a href="http://m.58.com/xianning/http://p.m.58.com/" onclick="load_index(this,'xianning');"  class="nobor nobor2 bor_r">咸宁</a></li>
+    <li><a href="http://m.58.com/xl/http://p.m.58.com/" onclick="load_index(this,'xl');" >锡林郭勒</a></li>
+     <li><a href="http://m.58.com/xl/http://p.m.58.com/" onclick="load_index(this,'xl');" >锡林郭勒</a></li>
+     <li><a href="http://m.58.com/xiangshanxian/http://p.m.58.com/" onclick="load_index(this,'xiangshanxian');" >象山</a></li>
+     <li><a href="http://m.58.com/xinghuashi/http://p.m.58.com/" onclick="load_index(this,'xinghuashi');" >兴化</a></li>
+        <li><a href="http://m.58.com/xinyishi/http://p.m.58.com/" onclick="load_index(this,'xinyishi');" >新沂</a></li>
+</ul>
+
+<h4><p><span>Y</span>(以Y为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/yt/http://p.m.58.com/" onclick="load_index(this,'yt');"  class="nobor">烟台</a></li>
+    <li><a href="http://m.58.com/yanan/http://p.m.58.com/" onclick="load_index(this,'yanan');" >延安</a></li>
+    <li><a href="http://m.58.com/yz/http://p.m.58.com/" onclick="load_index(this,'yz');" >扬州</a></li>
+    <li><a href="http://m.58.com/yc/http://p.m.58.com/" onclick="load_index(this,'yc');"  class="nobor">宜昌</a></li>
+    <li><a href="http://m.58.com/yancheng/http://p.m.58.com/" onclick="load_index(this,'yancheng');" >盐城</a></li>
+    <li><a href="http://m.58.com/yy/http://p.m.58.com/" onclick="load_index(this,'yy');" >岳阳</a></li>
+    <li><a href="http://m.58.com/yinchuan/http://p.m.58.com/" onclick="load_index(this,'yinchuan');"  class="nobor">银川</a></li>
+    <li><a href="http://m.58.com/yanbian/http://p.m.58.com/" onclick="load_index(this,'yanbian');" >延边</a></li>
+    <li><a href="http://m.58.com/yingtan/http://p.m.58.com/" onclick="load_index(this,'yingtan');" >鹰潭</a></li>
+    <li><a href="http://m.58.com/yx/http://p.m.58.com/" onclick="load_index(this,'yx');"  class="nobor">玉溪</a></li>
+    <li><a href="http://m.58.com/yuncheng/http://p.m.58.com/" onclick="load_index(this,'yuncheng');" >运城</a></li>
+    <li><a href="http://m.58.com/yichun/http://p.m.58.com/" onclick="load_index(this,'yichun');" >宜春</a></li>
+    <li><a href="http://m.58.com/yk/http://p.m.58.com/" onclick="load_index(this,'yk');"  class="nobor">营口</a></li>
+    <li><a href="http://m.58.com/yl/http://p.m.58.com/" onclick="load_index(this,'yl');" >榆林</a></li>
+    <li><a href="http://m.58.com/yb/http://p.m.58.com/" onclick="load_index(this,'yb');" >宜宾</a></li>
+    <li><a href="http://m.58.com/yongzhou/http://p.m.58.com/" onclick="load_index(this,'yongzhou');"  class="nobor">永州</a></li>
+    <li><a href="http://m.58.com/yj/http://p.m.58.com/" onclick="load_index(this,'yj');" >阳江</a></li>
+    <li><a href="http://m.58.com/yangchun/http://p.m.58.com/" onclick="load_index(this,'yangchun');" >阳春</a></li>
+    <li><a href="http://m.58.com/yq/http://p.m.58.com/" onclick="load_index(this,'yq');"  class="nobor">阳泉</a></li>
+    <li><a href="http://m.58.com/yuzhou/http://p.m.58.com/" onclick="load_index(this,'yuzhou');" >禹州</a></li>
+    <li><a href="http://m.58.com/yanling/http://p.m.58.com/" onclick="load_index(this,'yanling');" >鄢陵</a></li>
+    <li><a href="http://m.58.com/yulin/http://p.m.58.com/" onclick="load_index(this,'yulin');"  class="nobor">玉林</a></li>
+    <li><a href="http://m.58.com/yili/http://p.m.58.com/" onclick="load_index(this,'yili');" >伊犁</a></li>
+    <li><a href="http://m.58.com/ya/http://p.m.58.com/" onclick="load_index(this,'ya');" >雅安</a></li>
+    <li><a href="http://m.58.com/ys/http://p.m.58.com/" onclick="load_index(this,'ys');"  class="nobor">玉树</a></li>
+    <li><a href="http://m.58.com/yiyang/http://p.m.58.com/" onclick="load_index(this,'yiyang');" >益阳</a></li>
+    <li><a href="http://m.58.com/yf/http://p.m.58.com/" onclick="load_index(this,'yf');" >云浮</a></li>
+    <li><a href="http://m.58.com/yich/http://p.m.58.com/" onclick="load_index(this,'yich');"  class="nobor nobor2">伊春</a></li>
+    <li><a href="http://m.58.com/yxx/http://p.m.58.com/" onclick="load_index(this,'yxx');"  class="nobor2">永新</a></li>
+    <li><a href="http://m.58.com/yiwu/http://p.m.58.com/" onclick="load_index(this,'yiwu');"  class="nobor2">义乌</a></li>
+    <li><a href="http://m.58.com/yueqingcity/http://p.m.58.com/" onclick="load_index(this,'yueqingcity');"  class="nobor2">乐清</a></li>
+    <li><a href="http://m.58.com/yuyao/http://p.m.58.com/" onclick="load_index(this,'yuyao');"  class="nobor2">余姚</a></li>
+    <li><a href="http://m.58.com/yidou/http://p.m.58.com/" onclick="load_index(this,'yidou');"  class="nobor2">宜都</a></li>
+    <li><a href="http://m.58.com/yangzhong/http://p.m.58.com/" onclick="load_index(this,'yangzhong');"  class="nobor2">扬中</a></li>
+</ul>
+
+<h4><p><span>Z</span>(以Z为开头的城市名)</p></h4>
+
+<ul class="city_lst">
+
+    <li><a href="http://m.58.com/zz/http://p.m.58.com/" onclick="load_index(this,'zz');"  class="nobor">郑州</a></li>
+    <li><a href="http://m.58.com/zh/http://p.m.58.com/" onclick="load_index(this,'zh');" >珠海</a></li>
+    <li><a href="http://m.58.com/zjk/http://p.m.58.com/" onclick="load_index(this,'zjk');" >张家口</a></li>
+    <li><a href="http://m.58.com/zs/http://p.m.58.com/" onclick="load_index(this,'zs');"  class="nobor">中山</a></li>
+    <li><a href="http://m.58.com/zb/http://p.m.58.com/" onclick="load_index(this,'zb');" >淄博</a></li>
+    <li><a href="http://m.58.com/zhuzhou/http://p.m.58.com/" onclick="load_index(this,'zhuzhou');" >株洲</a></li>
+    <li><a href="http://m.58.com/zhangzhou/http://p.m.58.com/" onclick="load_index(this,'zhangzhou');"  class="nobor">漳州</a></li>
+    <li><a href="http://m.58.com/zhanjiang/http://p.m.58.com/" onclick="load_index(this,'zhanjiang');" >湛江</a></li>
+    <li><a href="http://m.58.com/zq/http://p.m.58.com/" onclick="load_index(this,'zq');" >肇庆</a></li>
+    <li><a href="http://m.58.com/zaozhuang/http://p.m.58.com/" onclick="load_index(this,'zaozhuang');"  class="nobor">枣庄</a></li>
+    <li><a href="http://m.58.com/zj/http://p.m.58.com/" onclick="load_index(this,'zj');" >镇江</a></li>
+    <li><a href="http://m.58.com/zk/http://p.m.58.com/" onclick="load_index(this,'zk');" >周口</a></li>
+    <li><a href="http://m.58.com/zd/http://p.m.58.com/" onclick="load_index(this,'zd');"  class="nobor">正定</a></li>
+    <li><a href="http://m.58.com/zmd/http://p.m.58.com/" onclick="load_index(this,'zmd');" >驻马店</a></li>
+    <li><a href="http://m.58.com/zg/http://p.m.58.com/" onclick="load_index(this,'zg');" >自贡</a></li>
+    <li><a href="http://m.58.com/zjj/http://p.m.58.com/" onclick="load_index(this,'zjj');"  class="nobor">张家界</a></li>
+    <li><a href="http://m.58.com/zy/http://p.m.58.com/" onclick="load_index(this,'zy');" >资阳</a></li>
+    <li><a href="http://m.58.com/zunyi/http://p.m.58.com/" onclick="load_index(this,'zunyi');" >遵义</a></li>
+    <li><a href="http://m.58.com/zhoushan/http://p.m.58.com/" onclick="load_index(this,'zhoushan');"  class="nobor">舟山</a></li>
+    <li><a href="http://m.58.com/zhangqiu/http://p.m.58.com/" onclick="load_index(this,'zhangqiu');" >章丘</a></li>
+    <li><a href="http://m.58.com/zx/http://p.m.58.com/" onclick="load_index(this,'zx');" >赵县</a></li>
+    <li><a href="http://m.58.com/zc/http://p.m.58.com/" onclick="load_index(this,'zc');"  class="nobor">诸城</a></li>
+    <li><a href="http://m.58.com/zt/http://p.m.58.com/" onclick="load_index(this,'zt');" >昭通</a></li>
+    <li><a href="http://m.58.com/zw/http://p.m.58.com/" onclick="load_index(this,'zw');" >中卫</a></li>
+    <li><a href="http://m.58.com/zhangye/http://p.m.58.com/" onclick="load_index(this,'zhangye');"  class="nobor nobor2">张掖</a></li>
+    <li><a href="http://m.58.com/zhangbei/http://p.m.58.com/" onclick="load_index(this,'zhangbei');"  class="nobor2">张北</a></li>
+    <li><a href="http://m.58.com/pld/http://p.m.58.com/" onclick="load_index(this,'pld');"  class="nobor2">庄河</a></li>
+    <li><a href="http://m.58.com/zhuji/http://p.m.58.com/" onclick="load_index(this,'zhuji');"  class="nobor2">诸暨</a></li>
+</ul>
+
+</div>
+
+
+ 
+</html>

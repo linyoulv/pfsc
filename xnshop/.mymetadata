@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="xnshop1009"
+  id="myeclipse.1469701747027"
+  context-root="/xnshop"
+  j2ee-spec="5.0"
+  archive="xnshop1009.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

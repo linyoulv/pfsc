@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yq.dao.MerchantDao">
+    <insert id="insert" parameterType="java.util.Map">
+	insert merchant(m_username,m_password,m_repassword,m_address,m_shbz,m_phone) 
+	values
+	(
+	#{m_username},#{m_password},#{m_repassword},#{m_address},#{m_shbz},#{m_phone}
+	) 
+    </insert>
+    
+    <select id="isExist" resultType="int">
+    select count(1) from merchant where m_username=#{m_username} and m_password=#{m_password} and m_shbz=1
+    </select> 
+    
+ 
+   <select id="list" resultType="com.yq.entity.Merchant">
+     select * from merchant  where m_shbz > -1
+      
+    <if test="m_username!=null and m_username!=''">
+    and m_username like CONCAT('%',#{m_username},'%')
+    </if>
+     order by id desc 
+     <if test="pageSize!=null and pageSize!=0">
+     limit #{currentNum},#{pageSize}
+    </if>
+   
+    </select>
+    
+    <delete id="delete" parameterType="String">  
+        delete FROM merchant where id=#{m_id}  
+    </delete> 
+    
+     <update id="update" parameterType="java.util.Map">
+       update merchant set m_shbz=1 where id=#{m_id}
+    </update>
+    
+    
+     <select id="count" resultType="int">
+       select count(1) from merchant where m_shbz > -1 
+ 
+    </select>
+    
+  
+</mapper>

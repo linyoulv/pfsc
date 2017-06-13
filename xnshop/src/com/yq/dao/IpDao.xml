@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yq.dao.IpDao">
+  <select id="isExist" resultType="int">
+    select count(1) from blackip where ipstring = #{ipstring}
+    </select>
+    
+  <select id="list" resultType="com.yq.entity.Ip">
+    select * from blackip where num>10;
+   </select>
+   
+   <update id="update" parameterType="java.util.Map">
+   update blackip set num = (num+1) where ipstring = #{ipstring}
+   </update>
+   
+   <insert id="insert" parameterType="java.util.Map">
+   insert into blackip(ipstring,num) values(#{ipstring},#{num})
+   </insert>
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yq.dao.ErrandsDao">
+    <insert id="insert" parameterType="java.util.Map">
+	insert Errands(errands_price) 
+	values
+	(#{errands_price}) 
+    </insert>
+    
+   <update id="update" parameterType="java.util.Map">
+    update Errands set errands_price=#{errands_price}  where  id=#{id}
+    </update>
+  
+     <select id="list1" resultType="com.yq.entity.Errands">
+    select * from Errands 
+    </select> 
+    <select id="list" resultType="com.yq.entity.Errands">
+    select * from Errands  where id=1 
+    </select>  
+   
+     <select id="listById" resultType="com.yq.entity.Errands">
+    select * from Errands where id=#{id} 
+    </select> 
+    
+      <select id="daibanlist" resultType="com.yq.entity.Errands">
+    select * from Errands where id=2 
+    </select> 
+    
+      <select id="jiesonglist" resultType="com.yq.entity.Errands">
+    select * from Errands where id=3
+    </select> 
+    
+    
+    
+</mapper>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yq.dao.MessageDao">
+    <insert id="insert" parameterType="java.util.Map">
+	insert 61_comment(content,goodId,addtime,username) 
+	values(
+	#{content},#{goodId},#{add_time},#{username} 
+	) 
+    </insert>
+    
+    
+    <select id="listById" resultType="com.yq.entity.Message">
+    select * from 61_comment where goodId=#{goodId} 
+    </select>
+  
+</mapper>
